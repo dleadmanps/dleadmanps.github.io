@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devon Leadman — Portfolio</title>
+  <meta name="description" content="Devon Leadman — software projects, skills, and experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf9; --surface: #ffffff; --text: #1c1917; --muted: #78716c;
+      --border: #e7e5e4; --accent: #2563eb; --accent-soft: #dbeafe; --todo: #b45309; --todo-soft: #fef3c7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09; --surface: #1c1917; --text: #f5f5f4; --muted: #a8a29e;
+        --border: #292524; --accent: #60a5fa; --accent-soft: #1e3a5f; --todo: #fbbf24; --todo-soft: #422006;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font: 16px/1.6 Inter, system-ui, sans-serif; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+    nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 85%, transparent);
+          backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 16px; }
+    nav .brand { font-weight: 700; color: var(--text); }
+    nav ul { display: flex; gap: 20px; list-style: none; padding: 0; font-size: 14px; }
+    nav ul a { color: var(--muted); }
+    @media (max-width: 640px) { nav ul { display: none; } }
+
+    header { padding: 96px 0 64px; }
+    .eyebrow { font: 500 13px JetBrains Mono, monospace; color: var(--accent); letter-spacing: .04em; }
+    h1 { font-size: clamp(36px, 7vw, 56px); line-height: 1.1; letter-spacing: -.02em; margin: 12px 0 16px; }
+    .lede { font-size: 19px; color: var(--muted); max-width: 640px; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn { display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 500; font-size: 15px;
+           border: 1px solid var(--border); color: var(--text); background: var(--surface); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn:hover { text-decoration: none; filter: brightness(1.05); }
+
+    section { padding: 56px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 26px; letter-spacing: -.01em; margin-bottom: 8px; }
+    .sub { color: var(--muted); margin-bottom: 28px; }
+
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .card h3 { font-size: 17px; margin-bottom: 6px; }
+    .card p { color: var(--muted); font-size: 15px; }
+    .card .links { margin-top: 12px; font-size: 14px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .tag { font: 12px JetBrains Mono, monospace; padding: 3px 8px; border-radius: 6px;
+           background: var(--accent-soft); color: var(--text); }
+
+    .todo { border-style: dashed; }
+    .todo-badge { display: inline-block; font: 500 11px JetBrains Mono, monospace; text-transform: uppercase;
+                  letter-spacing: .05em; padding: 2px 7px; border-radius: 4px; background: var(--todo-soft);
+                  color: var(--todo); margin-bottom: 10px; }
+
+    .timeline { list-style: none; padding: 0; display: grid; gap: 16px; }
+    .timeline .when { font: 13px JetBrains Mono, monospace; color: var(--muted); }
+
+    footer { padding: 40px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="#">Devon Leadman</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="wrap">
+    <div class="eyebrow">// portfolio — under construction</div>
+    <h1>Devon Leadman</h1>
+    <p class="lede">Software developer building desktop tooling for Linux and developer tools for AI-assisted software work.
+      <!-- TODO: replace with a one- or two-sentence pitch: role you want + what you're great at. --></p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn" href="https://github.com/dleadmanps">GitHub</a>
+      <a class="btn" href="#resume">Résumé</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="about">
+      <h2>About</h2>
+      <div class="card todo">
+        <span class="todo-badge">To fill in</span>
+        <p>Short bio: background, what kind of role you're looking for, location / remote preference, and what you enjoy building.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <p class="sub">Grouped so a recruiter can scan in ten seconds.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Languages</h3>
+          <div class="tags"><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">QML</span><span class="tag">Bash</span></div>
+        </div>
+        <div class="card">
+          <h3>Frameworks &amp; platforms</h3>
+          <div class="tags"><span class="tag">React</span><span class="tag">Tauri</span><span class="tag">Node.js</span><span class="tag">Quickshell / Qt Quick</span><span class="tag">Hyprland</span></div>
+        </div>
+        <div class="card">
+          <h3>Tools &amp; practices</h3>
+          <div class="tags"><span class="tag">Git / GitHub</span><span class="tag">Linux (Arch)</span><span class="tag">MCP servers</span><span class="tag">AI-assisted dev</span><span class="tag">Open-source PRs</span></div>
+        </div>
+        <div class="card todo">
+          <span class="todo-badge">To fill in</span>
+          <h3>Soft skills &amp; domain</h3>
+          <p>Product/requirements work, communication, any industry experience (e.g. property services).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="sub">Each card: what it is, what you did, the stack, and links.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Omarchy Windows-like</h3>
+          <p>Plugin for the Omarchy Linux desktop that adds a Windows-style dock and window handling: open-app indicators, click to minimize, drag to maximize or snap, window previews.</p>
+          <div class="tags"><span class="tag">QML</span><span class="tag">Hyprland</span><span class="tag">Bash</span></div>
+          <div class="links"><a href="https://github.com/dleadmanps/omarchy-windows-like">Source</a></div>
+        </div>
+        <div class="card">
+          <h3>Omarchy upstream contributions</h3>
+          <p>Pull requests to the Omarchy project (Basecamp's Arch/Hyprland distribution) for dock and window behaviour.</p>
+          <div class="tags"><span class="tag">Open source</span><span class="tag">Linux desktop</span></div>
+          <div class="links"><a href="https://github.com/omacom/omarchy/pulls?q=author%3Adleadmanps">Pull requests</a></div>
+        </div>
+        <div class="card todo">
+          <span class="todo-badge">To fill in</span>
+          <h3>Next project</h3>
+          <p>Add screenshots or a short demo GIF, your role, the problem it solves, and a measurable result if you have one.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience &amp; education</h2>
+      <ul class="timeline">
+        <li class="card todo">
+          <span class="todo-badge">To fill in</span>
+          <div class="when">YYYY – present</div>
+          <h3>Role — Company</h3>
+          <p>Two or three bullets of impact (numbers help).</p>
+        </li>
+        <li class="card todo">
+          <span class="todo-badge">To fill in</span>
+          <div class="when">YYYY</div>
+          <h3>Education / certifications</h3>
+          <p>Degree, bootcamp, or certifications.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="resume">
+      <h2>Résumé</h2>
+      <div class="card todo">
+        <span class="todo-badge">To fill in</span>
+        <p>Drop a <code>resume.pdf</code> in this repo and link it here.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="sub">Open to opportunities.</p>
+      <div class="cta">
+        <a class="btn" href="https://github.com/dleadmanps">GitHub</a>
+        <!-- TODO: add LinkedIn and a contact email you're comfortable publishing -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Devon Leadman · Hosted on GitHub Pages</div>
+  </footer>
+</body>
+</html>
