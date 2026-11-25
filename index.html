@@ -6,6 +6,7 @@
   <title>Devon Leadman — Product Manager</title>
   <meta name="description" content="Devon Leadman — Technical Product Manager, Business Analyst, and Certified ScrumMaster in Indianapolis, IN. Projects, experience, skills, and recommendations.">
   <meta property="og:title" content="Devon Leadman — Technical Product Manager">
+  <meta property="og:image" content="https://dleadmanps.github.io/assets/devon-leadman.jpg">
   <meta property="og:description" content="Product ownership, business analysis, and AI-assisted delivery. Projects, experience, and recommendations.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +38,11 @@
     @media (max-width: 720px) { nav ul { display: none; } }
 
     header { padding: 88px 0 56px; }
+    .hero { display: grid; grid-template-columns: 1fr 260px; gap: 48px; align-items: center; }
+    .portrait { width: 260px; aspect-ratio: 1; border-radius: 50%; object-fit: cover; object-position: 55% 30%;
+                border: 1px solid var(--border); box-shadow: 0 20px 60px -20px rgba(147, 51, 234, .45); }
+    @media (max-width: 720px) { .hero { grid-template-columns: 1fr; gap: 28px; }
+      .portrait { width: 160px; order: -1; } }
     .eyebrow { font: 500 13px JetBrains Mono, monospace; color: var(--accent); letter-spacing: .04em; }
     h1 { font-size: clamp(36px, 7vw, 56px); line-height: 1.1; letter-spacing: -.02em; margin: 12px 0 16px; }
     .lede { font-size: 19px; color: var(--muted); max-width: 700px; }
@@ -106,6 +112,8 @@
   </nav>
 
   <header class="wrap">
+    <div class="hero">
+    <div>
     <div class="eyebrow">Product Manager · Product Owner · Business Analyst · CSM</div>
     <h1>Devon Leadman</h1>
     <p class="lede">Technical Product Manager and Business Analyst with 5+ years in product ownership, software delivery, and enterprise consulting. I build hands-on instead of only writing requirements. Based in Indianapolis, IN.</p>
@@ -113,6 +121,9 @@
       <a class="btn primary" href="https://www.linkedin.com/in/devon-leadman/">Connect on LinkedIn</a>
       <a class="btn" href="#projects">View projects</a>
       <a class="btn" href="#experience">Experience</a>
+    </div>
+    </div>
+    <img class="portrait" src="assets/devon-leadman.jpg" alt="Portrait of Devon Leadman" width="260" height="260">
     </div>
     <div class="stats">
       <div class="stat"><b>800+</b><span>registered users on Chainlink, a product I own end to end</span></div>
